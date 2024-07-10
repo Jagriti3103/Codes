@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    vector <int> v= {1,2,3,4,5};
+    // iterator in short syntax
+    for(int value : v){
+        cout<<value<<" ";
+    }
+    cout<<"\n";
+    //this creates a copy of values
+    for(int value : v){
+        value++;
+    }
+    for(int value : v){
+        cout<<value<<" ";
+    }
+    cout<<"\n";
+    //lets use reference concept to save memory
+    for(int &value : v){
+        cout<<value<<" ";
+    }
+    cout<<"\n";
+    //using reference will increament the values 
+    for(int &value : v){
+        value++;
+    }
+    cout<<"The values will increase by 1: \n";
+    for(int &value : v){
+        cout<<value<<" ";
+    } 
+    cout<<"\n";
+
+    vector <pair<int,int>> v1={{1,2},{3,4}};
+    for (pair <int,int> &value : v1)
+    {
+        cout<<value.first<<" "<<value.second<<" \n";
+    }
+    
+    return 0;
+}
