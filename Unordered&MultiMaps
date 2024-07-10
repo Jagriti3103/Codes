@@ -1,0 +1,47 @@
+// Difference btw Maps and Unordered Maps are: 1. Inbuilt implementation  2.Time Complexity  3.Valid keys datatype
+//UNORDERED MAP
+//Ordered trees used Trees for its inbuilt implementation whereas Unordered Map uses HashTable so every key has a hash
+
+// Insertion and Deletion both uses O(1) as avg. time complexity due to the implementation of hash
+
+//Unordered_map doesnot support many datatypes for e.g. it doesnot support pairs reason being due to its inbuilt implementation using hash table, and we dont have any hash func available for that purpose. 
+//UNORDERED MAP
+//Ordered trees used Trees for its inbuilt implementation whereas Unordered Map uses HashTable so every key has a hash
+
+// Insertion and Deletion both uses O(1) as avg. time complexity due to the implementation of hash
+
+//Unordered_map doesnot support many datatypes for e.g. it doesnot support pairs reason being due to its inbuilt implementation using hash table, and we dont have any hash func available for that purpose. 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    unordered_map<int,string> m;
+    m[1]="one";  //O(1)
+    m[5]="five";
+    m[3]="three";
+    cout<<"Output will be Unordered.\n";
+    for( auto it: m){
+        cout<<it.first<<" "<<it.second<<" \n";
+    }
+    return 0;
+}
+
+//MULTIMAPS
+//only difference is it doesnot have unique key values
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    multimap<int, string> m;
+    m.insert({1, "one"});     // Use insert
+    m.insert({5, "five"});    // Use insert
+    m.insert({3, "three"});   // Use insert
+    m.insert({5, "Hii Five"});// Use insert for duplicate key
+    cout << "Output will be Ordered by keys.\n";
+    for (auto it : m) {
+        cout << it.first << " " << it.second << " \n";
+    }
+    return 0;
+}
