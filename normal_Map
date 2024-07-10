@@ -1,0 +1,40 @@
+//normal maps are sorted whereas unordered maps are not sorted
+// keys in maps are UNIQUE
+//insertion and extraction both is n(log(n))
+// insertion time varies depending about map<datatype,datatype> m;  
+// for string i.e map<string,string> m; it will be s.size * log(n)
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void print(map<int,string> &m){
+    // map<int,string> ::iterator it;
+    // for ( it = m.begin(); it != m.end(); it++)
+    // {
+    //     cout<<(*it).first<<" "<<(*it).second<<" \n";
+    // }
+    for(auto &num: m){
+        cout<<num.first<<" "<<num.second<<" \n";
+    }
+}
+
+int main(){
+    map<int,string> m;
+    m[1]="abc"; //time complexity : O (log(n))
+    m[5]="bcd";
+    m[3]="cde";
+    m.insert({4,"aaa"});
+    m.insert(make_pair(2,"two"));
+    // print(m);
+    m.clear(); //will clear the whole map
+    m.erase(5); //will delete key & value
+    auto it = m.find(3);
+    if(it == m.end()){
+        cout<<"No Value";           
+    }
+    else{
+        cout<<(*it).first<<" "<<(*it).second<<" \n";
+    }
+    return 0;
+}
