@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void print(set <string> &s){
+    for(auto value: s){
+        cout<<value<<" \n";
+    }
+}
+int main(){
+    set<string> s;      //similar to ordered map
+    s.insert("one");    //log(n)
+    s.insert("two");
+    s.insert("three");
+    print(s);
+    return 0;
+}
+
+
+// given N strings, find unique strings in lexiographical order
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void print(set <string> &s){
+    for(auto value: s){
+        cout<<value<<" \n";
+    }
+}
+
+int main(){
+    set<string> s;
+    int n;
+    cin>>n;
+    string ch;
+    for (int i = 0; i < n; i++)
+    {
+        cin>>ch;
+        s.insert(ch);
+    }
+    print(s);
+    return 0;
+}
